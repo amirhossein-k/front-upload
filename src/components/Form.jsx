@@ -2,9 +2,12 @@ import { type } from "@testing-library/user-event/dist/type";
 import axios from "axios";
 import { useEffect, useState, useRef } from "react";
 import { useParams } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { createSingle,createMultiple } from "../actions/uploadAction";
 
 const Form = () => {
   const nameUrl = window.location.href;
+  const dispatch = useDispatch()
   console.log(nameUrl);
   const [file, setFile] = useState();
   const [files, setFiles] = useState([]);
@@ -17,16 +20,21 @@ const Form = () => {
 
     formData.append("file", file);
 
-    const config = {
-      headers: {
-        "content-type": "multipart/form-data",
-      },
-    };
-    const { data } = await axios.post(
-      "http://localhost:8080/api/singleFile",
-      formData,
-      config
-    );
+    // const config = {
+    //   headers: {
+    //     "content-type": "multipart/form-data",
+    //   },
+    // };
+    // const { data } = await axios.post(
+    //   "http://localhost:8080/api/singleFile",
+    //   formData,
+    //   config
+    // );
+
+    dispatch(createSingle(
+      formData
+    ))
+
   };
 
   const handleMultipleClick = async (e) => {
@@ -41,17 +49,22 @@ const Form = () => {
   
 
     try{
-      const config = {
-        headers: {
-          "content-type": "multipart/form-data",
-        },
-      };
+      // const config = {
+      //   headers: {
+      //     "content-type": "multipart/form-data",
+      //   },
+      // };
 
-      const { data } = await axios.post(
-        "http://localhost:8080/api/multipleFiles",
-          formData,
-        config
-      );
+      // const { data } = await axios.post(
+      //   "http://localhost:8080/api/multipleFiles",
+      //     formData,
+      //   config
+      // );
+      dispatch(createMultiple(
+        formData,title
+      ))
+
+
     }catch(error){
       console.log(error);
     }
