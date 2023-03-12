@@ -12,7 +12,7 @@ const MultipleUpload = () => {
       <Row>
         <Header />
       </Row>
-      <Row className="single-body-style" >
+      <Row className="box box-page" >
         <Form />
       </Row>
       {success==='success' ?  <Row><p></p></Row>: success===undefined  || success==='' ? <Row><p>{erorr}</p></Row> : <Row><p>success</p></Row>}

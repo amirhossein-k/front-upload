@@ -8,10 +8,13 @@ const Header = () => {
     <>
         <ul className="nav justify-content-center nav-mystyle ">
             <li className="nav-item">
-                <Link className="nav-link active" to="/singleupload"  onClick={e=>setSingleclick(true)}>Upload Single</Link>
+                <Link className="nav-link active" to="/"  onClick={e=>setSingleclick(true)}>صفحه اصلی</Link>
             </li>
             <li className="nav-item">
-                <a className="nav-link" href="/multipleupload">Upload Multiple</a>
+                <Link className="nav-link active" to="/singleupload"  onClick={e=>setSingleclick(true)}>اپلود تکی</Link>
+            </li>
+            <li className="nav-item">
+                <a className="nav-link" href="/multipleupload">اپلود چندتایی</a>
             </li>
           
         </ul>

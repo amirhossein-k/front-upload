@@ -77,30 +77,32 @@ const Form = () => {
   }
 
   return (
-    <div>
+    <div className={`${nameUrl==='http://localhost:3000/singleupload' ? 'b' : 'bb'}`}>
       {nameUrl === "http://localhost:3000/singleupload" ? (
         <form onSubmit={handleSingleClick}>
           <input
             type="file"
             name="file"
+            className="file-input"
             onChange={(e) => setFile(e.target.files[0])}
           />
 
-          <button type="submit">Submit</button>
+          <button type="submit" className="submit">Submit</button>
         </form>
       ) : (
         <>
          
           <form onSubmit={handleMultipleClick}>
-            <input type='text' value={title} name="title" onChange={(e)=>setTitle(e.target.value)}/>
+            <input type='text' value={title} name="title" onChange={(e)=>setTitle(e.target.value)} className="text-input"/>
             <input
               type="file"
               name="files"
               onChange={(e)=>changeHandler(e)}
               multiple
+              className="file-input"
             />
 
-            <button type="submit">Submit</button>
+            <button type="submit" className="submit">Submit</button>
           </form>
         </>
       )}

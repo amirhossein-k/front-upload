@@ -1,6 +1,18 @@
+
+body{
+  padding: 0 !important;
+  margin: 0 !important;
+  box-sizing: border-box;
+  gap: 0 !important;
+}
+
+.row{
+  --bs-gutter-x:0 !important;
+}
 .nav-mystyle {
-  border: 1px solid black;
-  background-color: rgb(27, 240, 240);
+  border: 1px solid  rgb(6,15,44);
+
+  background: linear-gradient(142deg, rgba(6,15,44,1) 0%, rgba(9,9,121,1) 22%, rgba(86,6,108,1) 53%, rgba(132,5,101,1) 100%);
 }
 
 .nav-mystyle li {
@@ -9,4 +21,116 @@
 .nav-mystyle li a {
   color: #ffff;
   padding: 15px;
+}
+
+.constainerstyle{
+  gap: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+
+}
+
+.box{
+background-image: url('./back.jpg');
+height: 100vh;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+display: flex;
+justify-content: center;
+align-items: center;
+color: #ffff;
+}
+
+.title{
+font-size: 45px;
+font-weight: 500;
+animation-name: text ;
+animation-duration: 4s;
+animation-timing-function:cubic-bezier(0.25, 0.46, 0.45, 0.94);
+animation-iteration-count: infinite;
+
+}
+
+
+.light-top{
+  position: absolute;
+  content: '';
+  top: 154px;
+  right:-4px;
+  border-radius: 5px;
+  width: 608px;
+  height: 17px;
+  background-color: #eb2dc6;
+  animation-name: amir ;
+  animation-duration: 4s;
+  animation-timing-function:cubic-bezier(0.77, 0, 0.175, 1);
+  animation-iteration-count: infinite;
+}
+
+.light-bottom{
+  position: absolute;
+  content: '';
+  bottom: 34px;
+  left:-4px;
+  border-radius: 5px;
+  width: 615px;
+  height: 18px;
+  background-color: #1c52b5;
+  animation-name: amir ;
+  animation-duration: 4s;
+  animation-timing-function:cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  animation-iteration-count: infinite;
+}
+
+.box-page{}
+.b{
+  display: flex;
+  justify-content: center;
+  border: 1px solid;
+  height: 91px;
+  align-items: center;
+  width: 550px;
+}
+.bb{
+  display: flex;
+  justify-content: center;
+  border: 1px solid;
+  height: 91px;
+  align-items: center;
+  width: 700px;
+}
+
+.submit{
+  border: none;
+  padding: 5px 35px;
+  border-radius: 5px;
+}
+.text-input{
+
+}
+.file-input{
+  border: 1px solid;
+  margin: 5px;
+}
+@keyframes amir {
+
+  100%{
+    width: 608px;
+  }
+  0%{
+    width: 0px;
+  }
+  
+}
+@keyframes text {
+
+  100%{
+    text-shadow: 2px 2px #adadad;
+  }
+  0%{
+    text-shadow: 2px 2px #181313;
+
+  }
+  
 }
