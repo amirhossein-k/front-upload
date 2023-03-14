@@ -16,6 +16,9 @@ const Header = () => {
             <li className="nav-item">
                 <a className="nav-link" href="/multipleupload">اپلود چندتایی</a>
             </li>
+            <li className="nav-item">
+                <a className="nav-link" href="/gallery">گالری</a>
+            </li>
           
         </ul>
     </>

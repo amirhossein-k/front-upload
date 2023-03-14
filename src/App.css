@@ -51,7 +51,7 @@ animation-timing-function:cubic-bezier(0.25, 0.46, 0.45, 0.94);
 animation-iteration-count: infinite;
 
 }
-
+/* 
 
 .light-top{
   position: absolute;
@@ -66,9 +66,9 @@ animation-iteration-count: infinite;
   animation-duration: 4s;
   animation-timing-function:cubic-bezier(0.77, 0, 0.175, 1);
   animation-iteration-count: infinite;
-}
+} */
 
-.light-bottom{
+/* .light-bottom{
   position: absolute;
   content: '';
   bottom: 34px;
@@ -81,8 +81,27 @@ animation-iteration-count: infinite;
   animation-duration: 4s;
   animation-timing-function:cubic-bezier(0.25, 0.46, 0.45, 0.94);
   animation-iteration-count: infinite;
-}
+} */
+.row img{
+  width: 250px;
+  margin: 5px;
 
+}
+.box-form{
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  justify-content: center;
+  align-items: center;
+}
+.box-img{
+  display: flex;
+  margin: 5px;
+  padding: 5px;
+  justify-content: center;
+  /* background-color: #adadad; */
+
+}
 .box-page{}
 .b{
   display: flex;
@@ -96,9 +115,10 @@ animation-iteration-count: infinite;
   display: flex;
   justify-content: center;
   border: 1px solid;
-  height: 91px;
+  height: 217px;
   align-items: center;
   width: 700px;
+  flex-direction: column;
 }
 
 .submit{
